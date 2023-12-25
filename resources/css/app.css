@@ -243,3 +243,94 @@ svg {
         height: 200px;
     }
 }
+
+@media (max-height: 680px) {
+    .container {
+        display: flex;
+        height: 400px;
+    }
+
+    .input__container {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+    }
+
+    .input__group {
+        flex-direction: column;
+        margin: 0 0 0 24px;
+    }
+
+    .button__wrapper {
+        flex-direction: column;
+        margin: 24px 0 0 24px;
+    }
+
+    @media (max-height: 490px) {
+        .container {
+            display: flex;
+            height: 200px;
+        }
+
+        .heroes__card {
+            height: 98%;
+            width: 25%;
+            font-size: 6px;
+        }
+
+        .card__info {
+            height: 40%;
+        }
+
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+
+        .heroes__wrapper {
+            max-width: 50%;
+            margin-right: 24px;
+        }
+
+        .input__container {
+            width: 100%;
+            gap: unset;
+        }
+
+        .input__group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: unset;
+        }
+
+        .input {
+            width: 100%;
+            font-size: 10px;
+        }
+
+        input#heroName.input {
+            margin: 0;
+        }
+
+        input#heroClass.input {
+            margin: 6px 0 0 0;
+        }
+
+        input#heroImage.input {
+            margin: 6px 0 0 0;
+        }
+
+        .button__wrapper {
+            display: flex;
+            margin: 6px 0 0 0;
+            padding: 0 24px 0 0;
+            width: 100%;
+        }
+
+        .button {
+            font-size: 10px;
+            width: 100%;
+        }
+    }
+}
