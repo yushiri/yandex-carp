@@ -5,13 +5,25 @@ document.addEventListener('DOMContentLoaded', () => {
             id: uuid(),
             name: 'Axe',
             class: 'Tank',
-            image: 'https://masterpiecer-images.s3.yandex.net/f7d04e3b7c0f11eebc42beb332dff282:upscaled'
+            image: 'https://masterpiecer-images.s3.yandex.net/f7d04e3b7c0f11eebc42beb332dff282:upscaled',
         },
         {
             id: uuid(),
             name: 'Crystal Maiden',
             class: 'Support',
-            image: 'https://img2.reactor.cc/pics/post/full/Crystal-Maiden-Dota-%D1%84%D1%8D%D0%BD%D0%B4%D0%BE%D0%BC%D1%8B-Juninho-Albert-3967825.jpeg'
+            image: 'https://img2.reactor.cc/pics/post/full/Crystal-Maiden-Dota-%D1%84%D1%8D%D0%BD%D0%B4%D0%BE%D0%BC%D1%8B-Juninho-Albert-3967825.jpeg',
+        },
+        {
+            id: uuid(),
+            name: 'Stoned Pudge',
+            class: 'Tank',
+            image: 'https://masterpiecer-images.s3.yandex.net/899ec1d57a9311ee9390f6c574779d3e:upscaled',
+        },
+        {
+            id: uuid(),
+            name: 'Windranger',
+            class: 'Universal',
+            image: 'https://i.ytimg.com/vi/OAkVMZ7CKS0/oar2.jpg',
         },
     ];
 
