@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         localStorage.setItem('heroes', JSON.stringify(heroes));
 
-        displayHeroes();
+        displayHeroes(heroes);
 
         heroName.value = '';
         heroClass.value = '';
@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('addButton').addEventListener('click', addHero);
 
-    function displayHeroes() {
+
+    function displayHeroes(heroes) {
         let heroesContainer = document.getElementById('heroesContainer');
 
         heroesContainer.innerHTML = '';
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="card__image" 
                  data-id="${element.id}" 
                  style="background: no-repeat center/cover url('${element.image}')">
-                <button data-trigger="delete" 
+                <button data-trigger="delete" data-id=${element.id}
                         class="delete__button">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                          width="22" 
@@ -78,28 +79,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>`;
 
+
             heroesContainer.appendChild(heroDiv);
         });
 
         heroes.forEach((heroObject) => {
-            console.log(heroObject);
-
             let deleteButton = document.querySelector(`[data-id="${heroObject.id}"] [data-trigger="delete"]`);
 
             deleteButton.onclick = () => {
-                heroes.filter((heroObject) => {
-                    return heroObject.id !== heroObject;
+                const currentId = deleteButton.getAttribute("data-id");
+
+                const updatedHeroes = heroes.filter((heroObject) => {
+                    return heroObject.id !== currentId;
                 });
-                heroes.splice(heroObject.id, 1);
-                localStorage.setItem('heroes', JSON.stringify(heroes));
+
+                displayHeroes(updatedHeroes);
+                localStorage.setItem('heroes', JSON.stringify(updatedHeroes));
+
             };
 
-            console.log([
-                deleteButton
-            ])
         });
     }
 
-    displayHeroes();
+    displayHeroes(heroes);
 
 });
