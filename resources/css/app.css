@@ -154,6 +154,25 @@ p {
     user-select: none;
 }
 
+.delete__button {
+    position: absolute;
+    margin: 6px auto auto auto;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+svg {
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: #cccccc;
+    justify-content: center;
+    align-items: center;
+}
+
 .heroes__wrapper {
     display: flex;
     padding: 12px;
@@ -220,7 +239,7 @@ p {
     }
 
     .heroes__card {
-        width: 100%;
+        width: 60%;
         height: 200px;
     }
 }
