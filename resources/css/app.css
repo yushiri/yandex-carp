@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    margin: unset;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    background: center/cover no-repeat url("https://r4.wallpaperflare.com/wallpaper/30/586/460/artwork-fantasy-art-digital-art-forest-wallpaper-3cdadbae5dd4b0ca4dd008fd72d13bf3.jpg");
+}
+
+p {
+    font-weight: bold;
+}
+
+.container {
+    display: block;
+    justify-content: center;
+    min-height: 90vh;
+    width: 1400px;
+    margin: 24px auto auto auto;
+    background: rgba(255, 0, 222, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px 7px rgba(255, 0, 222, 0.2);
+}
+
+.form__input {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.input__container {
+    display: block;
+    align-items: center;
+    width: 540px;
+    gap: 24px;
+}
+
+.input__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    outline: none;
+    border: black inset 1px;
+    padding: 2px 12px 2px 12px;
+    margin-top: 24px;
+    border-radius: 6px;
+    background: rgba(40, 15, 30, 0.9);
+    color: #eeeeee;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    width: 240px;
+    user-select: none;
+}
+
+.input::placeholder {
+    color: #eeeeee;
+}
+
+#heroesContainer {
+    display: flex;
+    padding: 12px;
+    gap: 24px;
+    width: 100vh;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(12, 12, 12, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 0, 174, 0.25);
+    border-radius: 48px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 0, 174, 0.20);
+}
+
+::-webkit-scrollbar-button:horizontal:decrement {
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #555555 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:horizontal:increment {
+    border-width: 8px 8px 0 8px;
+    border-color: #555555 transparent transparent transparent;
+}
+
+.heroes__card {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    background: rgba(100, 0, 100, 0.9);
+    color: #eeeeee;
+    width: 220px;
+    height: 300px;
+    box-shadow: 3px 1px 3px rgba(255, 5, 0, 0.04);
+    border-radius: 14px;
+    padding: 12px;
+    gap: 24px;
+}
+
+.card__image {
+    position: relative;
+    background: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.card__info {
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+.card__info_content {
+    padding: 0 12px 12px 12px;
+}
+
+.button__wrapper {
+    display: flex;
+    justify-content: end;
+    margin-top: 24px;
+}
+
+.button {
+    display: flex;
+    height: 36px;
+    padding: 12px 24px 12px 24px;
+    align-items: center;
+    cursor: pointer;
+    color: #eeeeee;
+    background: rgba(255, 5, 0, 0.64);
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    user-select: none;
+}
+
+.heroes__wrapper {
+    display: flex;
+    padding: 12px;
+    background: rgba(12, 12, 12, 0.8);
+    box-shadow: 6px 3px 6px rgba(1, 1, 1, 0.3);
+    border-radius: 12px;
+    justify-content: center;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .container {
+        width: 800px;
+    }
+}
+
+@media (max-width: 840px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media (max-width: 980px) {
+    .input__group {
+        flex-direction: column;
+        padding-right: 24px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .input#heroClass {
+        margin-top: 24px;
+    }
+
+    .button__wrapper {
+        justify-content: start;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        width: 85%;
+    }
+
+    #heroesContainer {
+        width: 100%;
+    }
+
+    .heroes__card {
+        width: 100%;
+        height: 200px;
+    }
+}

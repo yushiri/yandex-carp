@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heroes Dota</title>
+    <link href="resources/css/app.css" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="heroes__wrapper">
+            <div id="heroesContainer"></div>
+        </div>
+        <div class="form__input">
+            <div class="input__container">
+                <div class="input__group">
+                    <input class="input"
+                           type="text"
+                           id="heroName"
+                           maxlength="30"
+                           minlength="1"
+                           placeholder="Hero name"
+                           aria-label="Hero name">
+                    <input class="input"
+                           type="text"
+                           id="heroClass"
+                           maxlength="30"
+                           minlength="1"
+                           placeholder="Hero class"
+                           aria-label="Hero calss">
+                </div>
+                <div>
+                    <input class="input"
+                           id="heroImage"
+                           type="url"
+                           placeholder="Hero image URL"
+                           aria-label="Hero image">
+                </div>
+                <div class="button__wrapper">
+                    <button id="addButton" class="button">Add hero</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="resources/js/app.js"></script>
+</body>
+</html>
